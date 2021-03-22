@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.barra-bianca {
+  height: 50px;
+  background-color: #fff;
+  vertical-align: bottom;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+.barra-blue {
+  height: 50px;
+  background-color: lightblue;
+  position: relative;
+}
+
+.container-selection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgrey;
+}
+
+/* CARDS */
+
+
+.card {
+  width: 150px;
+  height: 80px;
+  background-color: #fff;
+  border: black solid 1px;
+  border-radius: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.i-container {
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.container-elements {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+i {
+   font-size: 35px;
+}
+
+.label-icons {
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+i.vegetable {
+  color: orange;
+}
+i.user {
+  color: blue;
+}
+i.animal {
+  color: pink;
+}
