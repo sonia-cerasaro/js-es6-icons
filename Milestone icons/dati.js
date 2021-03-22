@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	var icons = [
 		{
 			name: 'cat',
@@ -99,22 +98,34 @@ $(document).ready(function(){
 		}
 	];
 
-	for (var i = 0; i < icons.length; i++) {
-		$('.row').append(`<div class="col-3">
-				 <div class="card">
-					<div class="container-elements">
-					<div class="i-container">
-					<i class="${icons[i].family} ${icons[i].prefix}${icons[i].name}"></i>
-				 </div>
-				 <label class="label-icons">${icons[i].name}</label>
-				 </div>
-				 </div>
-			   </div>`);
-	}
+	$('#cards').on('change', function getSelected() {
+			var selectedIcons = [];
+			var value = document.getElementById("cards").value;
+			if(value.toLowerCase() == "all"){
+				selectedIcons = icons;
+			}
+			else {
+				// var selectedIcons = icons.filter(icon => icon.name.toLowerCase() == value.toLowerCase());
+				for (var i = 0; i < icons.length; i++) {
+					if(icons[i].type.toLowerCase() == value.toLowerCase()){
+						selectedIcons.push(icons[i]);
+					}
+				}
+			}
+				for (var i = 0; i < selectedIcons.length; i++) {
+				$('.row').append(`<div class="col-3">
+						 <div class="card">
+							<div class="container-elements">
+							<div class="i-container">
+							<i class="${selectedIcons[i].family} ${selectedIcons[i].prefix}${selectedIcons[i].name} ${selectedIcons[i].type}"></i>
+						 </div>
+						 <label class="label-icons">${selectedIcons[i].name}</label>
+						 </div>
+						 </div>
+						 </div>`
+					 );
+			}
+		}
+  );
+
 });
-
-
-
-function functionName() {
-
-}
