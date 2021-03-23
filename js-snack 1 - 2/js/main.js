@@ -1,7 +1,7 @@
-JSNACK 1
-Creare un array di oggetti: ogni oggetto descriverà
-una bici da corsa con le seguenti proprietà: nome e peso.
-Stampare a schermo la bici con peso minore.
+// JSNACK 1
+// Creare un array di oggetti: ogni oggetto descriverà
+// una bici da corsa con le seguenti proprietà: nome e peso.
+// Stampare a schermo la bici con peso minore.
 
 
 var bici = [
@@ -32,10 +32,14 @@ bici.forEach((element) => {
   }
 });
 
-// filtra gli elementi nella bici e quando trovi un peso uguale
- // a min assegna il valore a bici Piccola
 var biciPiccola = bici.filter((element) => element.peso == min);
 console.log(`La bici piu piccola e ${biciPiccola[0].nome} e il peso e' di ${biciPiccola[0].peso}`);
+
+
+// filtra gli elementi nella bici e quando trovi un peso uguale
+ // a min assegna il valore a bici Piccola
+// var biciPiccola = bici.filter((element) => element.peso == min);
+// console.log(`La bici piu piccola e ${biciPiccola[0].nome} e il peso e' di ${biciPiccola[0].peso}`);
 
 // JSNACK 2
 // Si scriva una funzione che accetti tre argomenti,
@@ -46,8 +50,8 @@ console.log(`La bici piu piccola e ${biciPiccola[0].nome} e il peso e' di ${bici
 
 
 const myArray = [1, 2, 3, 4, 5, 6, 7];
-var inizio = parseInt(prompt('dammi il valore di partenza'));
-var fine = parseInt(prompt('dammi il valore finale'));
+var inizio = parseInt(prompt('dammi il valore minore'));
+var fine = parseInt(prompt('dammi il valore maggiore'));
 
 var arrayEstratto = estrazioneValori(myArray, inizio, fine);
 console.log(arrayEstratto);
@@ -55,12 +59,12 @@ console.log(arrayEstratto);
 function estrazioneValori(array, inizio, fine) {
   return array.slice(inizio, fine);
 }
-
-// SECONDA OPZIONE
-
+//
+// // SECONDA OPZIONE
+//
 const myArray = [1, 2, 3, 4, 5, 6, 7];
 var inizio = 3;
-var fine = 5;
+var fine = inizio + 2;
 
 var arrayEstratto = estrazioneValori(myArray, inizio, fine);
 console.log(arrayEstratto);
